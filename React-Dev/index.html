@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="createElement">
+
+    </div>
+    <script>
+        // A new element is created
+        const heading = document.createElement("h1"); 
+        
+        // Inside the new element we added some text
+        heading.innerHTML = "Hello world with Javascript!"; 
+        
+        // We've created a const variable conataining div with "CreateElementID"
+        const createElement = document.getElementById("createElement"); 
+
+        // Finally append the heading element into createElement by passing it as a argument into "appendChild()" Method.
+        createElement.appendChild(heading); 
+
+    </script>
+    <script 
+        crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script 
+        crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
+</body>
+</html>
