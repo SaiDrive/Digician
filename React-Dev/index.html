@@ -10,6 +10,15 @@
     <div id="createElement">
 
     </div>
+    <div id="root">
+        Not reacted !
+    </div>
+    <script 
+        crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script 
+        crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
     <script>
         // A new element is created
         const heading = document.createElement("h1"); 
@@ -24,11 +33,16 @@
         createElement.appendChild(heading); 
 
     </script>
-    <script 
-        crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+    <script>
+        // Creating a new react element using React.createElement() API
+        const reactHeading = React.createElement("h1", {}, "Hello React");
+
+        // Assigning root variable to root element using ReactDOM.createRoot() API
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        // binding reactHeading to root element using render() method by passing reactHeading as a argument into it
+        root.render(reactHeading);
     </script>
-    <script 
-        crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
-    </script>
+    
 </body>
 </html>
